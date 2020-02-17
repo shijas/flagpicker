@@ -3,8 +3,10 @@
 Instructions: 
 1. Run it as a Springboot program.
 2. This has 2 REST services. One to fetch the continents and next one is to fetch the countries based on name.
-3. JUnit test cases are available for the countries based on name.
-4. Actuator framework is plugged in to know the health of application
+3. JUnit test cases are available in the test directory from the REST controllers onwards.
+4. Actuator framework is plugged in to know the health of application.
+5. This uses NoSQL MongoDB as the Database.
+
 
 Url: http://localhost:8080/continents?name=America
 
