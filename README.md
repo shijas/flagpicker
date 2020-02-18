@@ -16,8 +16,10 @@ Instructions:
 Services:
 This will fetch all continents
 http://localhost:8080/FlagPicker/continents
+
 Search url for a continent. This will fetch America and Africa. It's case insensitive.
 http://localhost:8080/FlagPicker/continents?name=ca
+
 This will fetch the countries
 http://localhost:8080/FlagPicker/countries?names=USA,India
 
