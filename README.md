@@ -13,8 +13,7 @@ Instructions:
 7. java -jar target/FlagPicker-0.0.1-SNAPSHOT.jar
 
 
-Services:
-This will fetch all continents
+This GET service will fetch all continents: 
 http://localhost:8080/FlagPicker/continents
 
 Search url for a continent. This will fetch America and Africa. It's case insensitive.
