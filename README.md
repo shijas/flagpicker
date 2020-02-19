@@ -30,6 +30,9 @@ http://localhost:8080/FlagPicker/actuator/metrics/http.server.requests
 
 
 LoggingAspect prints the method performance:
+
 Execution time of method: FlagPickerDAOImpl.findAll : 2 milliseconds
+
 Execution time of method: FlagPickerServiceImpl.findContinentByName : 3 milliseconds
+
 Execution time of method: FlagPickerController.fetchContinents : 3 milliseconds
