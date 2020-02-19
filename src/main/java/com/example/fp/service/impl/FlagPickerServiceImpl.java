@@ -1,4 +1,4 @@
-package com.example.fp.service;
+package com.example.fp.service.impl;
 
 import java.util.List;
 
@@ -7,18 +7,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.fp.dao.FlagPickerRepository;
+
+import com.example.fp.dao.impl.FlagPickerDAOImpl;
 import com.example.fp.model.Continent;
 import com.example.fp.model.Country;
 
 @Service
-public class FlagPickerService {
+public class FlagPickerServiceImpl {
 	
-    private static final Logger LOGGER = LoggerFactory.getLogger(FlagPickerService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FlagPickerServiceImpl.class);
 
 	@Autowired
-	private FlagPickerRepository flagPickerRepository;
-
+	private FlagPickerDAOImpl flagPickerDAOImpl;
+	
 	/**
 	 * Service to fetch all continents if name is null 
 	 * or continent by name.
@@ -29,10 +30,10 @@ public class FlagPickerService {
 	public List<Continent> findContinentByName(String name) {
 		if (name == null) {
 			LOGGER.info("Continents service to fetch all");
-			return flagPickerRepository.findAll();
+			return flagPickerDAOImpl.findAll();
 		}
 		LOGGER.info("Continents by name service call :: {}", name);
-		return flagPickerRepository.findByContinents(name);
+		return flagPickerDAOImpl.findByContinents(name);
 	}
 	
 	/**
@@ -43,6 +44,6 @@ public class FlagPickerService {
 	 */
 	public List<Country> findContriesByName(List<String> countryNames) {
 		LOGGER.info("Contry service to fetch by name");
-		return flagPickerRepository.findContries(countryNames);
+		return flagPickerDAOImpl.findContries(countryNames);
 	}
 }

@@ -24,3 +24,6 @@ http://localhost:8080/FlagPicker/countries?names=USA,India
 
 Acutator Url:
 http://localhost:8080/FlagPicker/actuator/health
+
+This will give the number of times continents or flags viewed. Measurements -> statistic ->value
+http://localhost:8080/FlagPicker/actuator/metrics/http.server.requests

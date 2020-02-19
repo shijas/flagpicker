@@ -1,4 +1,4 @@
-package com.example.fp.dao;
+package com.example.fp.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +13,14 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
+import com.example.fp.dao.FlagPickerDAO;
 import com.example.fp.model.Continent;
 import com.example.fp.model.Country;
 
 @Repository
-public class FlagPickerRepository {
+public class FlagPickerDAOImpl implements FlagPickerDAO {
 	
-    private static final Logger LOGGER = LoggerFactory.getLogger(FlagPickerRepository.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FlagPickerDAOImpl.class);
 
 	@Autowired
 	private MongoTemplate mongoTemplate;
