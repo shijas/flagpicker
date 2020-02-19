@@ -12,6 +12,8 @@ import com.example.fp.dao.impl.FlagPickerDAOImpl;
 import com.example.fp.model.Continent;
 import com.example.fp.model.Country;
 
+import io.micrometer.core.instrument.util.StringUtils;
+
 @Service
 public class FlagPickerServiceImpl {
 	
@@ -28,8 +30,8 @@ public class FlagPickerServiceImpl {
 	 * @return continents List<Continent> 
 	 */
 	public List<Continent> findContinentByName(String name) {
-		if (name == null) {
-			LOGGER.info("Continents service to fetch all");
+		if (StringUtils.isBlank(name)) {
+			LOGGER.info("Fetching all continents since name value is null");
 			return flagPickerDAOImpl.findAll();
 		}
 		LOGGER.info("Continents by name service call :: {}", name);

@@ -2,12 +2,9 @@ package com.example.fp.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.example.fp.model.Continent;
 import com.example.fp.model.Country;
 
-@Repository
 public interface FlagPickerDAO {
 
 	/**

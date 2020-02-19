@@ -2,12 +2,9 @@ package com.example.fp.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.example.fp.model.Continent;
 import com.example.fp.model.Country;
 
-@Service
 public interface FlagPickerService {
 
 	/**
